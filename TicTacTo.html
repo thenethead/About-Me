@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>tic tac toe</title>
+	<style type="text/css">
+		table,td{border: 2px solid blue;
+			border-collapse: collapse;
+			width: 500px;
+			height: 100px;
+			text-align: center;}
+		table{margin-top: 150px;}
+		caption{margin-bottom: 30px;
+				font-style: bold
+				font-size:100px;
+				color: blue;
+				text-decoration: underline;}
+		#click{background-color: yellow;
+		font-style: bold;
+		font-size: 30px;}		
+
+	</style>
+	</head>
+<body>
+	<center>
+<table id="click">
+	<caption>Tic Tac Toe ( <span id=turn >O</span>'s Turn )</caption>
+	<tr>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+	</tr>
+	<tr>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+	</tr>
+	<tr>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+		<td onclick=xyz(this) ></td>
+	</tr>
+</table>
+</center>
+
+<script>
+
+var player = 'O';
+
+function xyz(t){
+	// console.log(t);
+	// alert(t.innerHTML);  
+
+	var turn = document.getElementById('turn');
+
+	if(player == 'O')	player = 'X';
+	else   player = 'O' ;
+
+	t.innerHTML = player;
+	
+	turn.innerHTML = player;
+}
+
+
+var td = document.getElementsByTagName('td');
+
+for(var i = 0; i<td.length; i++){
+
+	td[i].innerHTML = i+1 ;
+	
+}
+
+// var r = document.getElementById('kd');
+// r.onclick = function(){
+// alert(r.innerHTML);
+// }
+</script>
+
+</body>
+</html>
